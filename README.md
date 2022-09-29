@@ -2,7 +2,7 @@
 
 **Todas las herramientas utilizadas en Arch Linux y Kubuntu**
 
-## Conectar un repositorio local con SSH
+# Conectar un repositorio local con SSH
 
 Antes de generar una llave ssh se debe verificar si el email y el nombre está configurado
 ```bash
@@ -44,3 +44,21 @@ Ahora podemos actualizar la URL que guardamos en nuestro repositorio remoto, sol
 ```bash
 git remote set-url origin url-ssh-del-repositorio-en-github
 ```
+
+# Cómo autenticarte en GitHub 2022
+
+Antes de empezar debemos renombrar la rama ‘máster’ a ‘main’, este es el nuevo estándar en GitHub, para esto:
+
+Primero nos posicionamos en la rama a la que queremos cambiarle el nombre.
+Ejecutamos el siguiente comando: git branch -M main
+Pasos para crear un token de acceso personal.
+
+Desde el 2022 GitHub ya no deja hacer el push con la contraseña del propio GitHub, para esto tenemos que crear un token, y este token es la contraseña que vamos a colocar cuando nos pida clave
+
+Seguir la secuencia: Ingresamos a nuestra cuenta de GitHub.
+
+Buscamos Settings
+Click en Developer settings
+Click en Personal access tokens
+Click en Generate new token aquí se puede colocar un nombre, la fecha de expiración.
+Tildar en repo y luego click en el botón verde Generate token
