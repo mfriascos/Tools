@@ -2,6 +2,14 @@
 
 **Todas las herramientas utilizadas en Arch Linux y Kubuntu**
 
+**Table**
+- [Conectar un Repositorio Local con SSH](#conectar-un-repositorio-local-con-ssh)
+- [Conexión a Github con SSH](#conexión-a-github-con-ssh)
+- [Cómo autenticarte en GitHub 2022](#cómo-autenticarte-en-github-2022)
+
+
+
+
 # Conectar un repositorio local con SSH
 
 Antes de generar una llave ssh se debe verificar si el email y el nombre está configurado
@@ -14,6 +22,7 @@ git config --global user.email marioriascos1201@gmail.com
 git config --global user.name Mario Riascos
 ```
 Cómo generar tus llaves SSH
+
 1. Generar tus llaves SSH**
 
 Recuerda que es muy buena idea proteger tu llave privada con una contraseña.
@@ -62,3 +71,35 @@ Click en Developer settings
 Click en Personal access tokens
 Click en Generate new token aquí se puede colocar un nombre, la fecha de expiración.
 Tildar en repo y luego click en el botón verde Generate token
+
+# Personalizar la Terminal de Comandos 
+
+Comando para dejar por DEFECTO la shell de bash o zsh:
+```bash
+$ chsh -s $(which bash)
+
+$ chsh -s $(which zsh)
+```
+## Usa Power Level
+Vamos a instalarle un tema (powerLevel10K):
+```bash
+$ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+```
+después vamos a entrar al archivo .zshrc:
+```bash
+$ vim ~/.zshrc
+```
+buscamos y cambiamos la parte que dice ZSH_THEME por esto:
+```bash
+$ ZSH_THEME="powerlevel10k/powerlevel10k"
+```
+Guardamos y salimos.
+
+Después instalamos estas 4 fuentes de texto 1 2 3 4
+
+Cuando salgamos y volvamos a entrar a la terminal nos va a salir el wizard de powerlevel10k para configurar la terminal como quieras, simplemente sigue los pasos.
+
+Para volver a configurar el tema Powerlevel10k desde el principio en caso de que quieras cambiar algo:
+```bash
+$ p10k configure
+```
